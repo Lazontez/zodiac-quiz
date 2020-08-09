@@ -19,7 +19,13 @@ const questions = [
 
 let count = 0
 function askQuestion (){
-
     document.getElementById("question").innerHTML = questions[count].question
-    document.get
+    document.getElementById("answer-one").innerHTML = questions[count].choices[0]
+    document.getElementById("answer-two").innerHTML = questions[count].choices[1]
+    document.getElementById("answer-three").innerHTML = questions[count].choices[2]
+    document.getElementById("answer-four").innerHTML = questions[count].choices[3]
+
+    // count++
 }
+
+askQuestion()
