@@ -18,6 +18,7 @@ const questions = [
 ]
 
 let count = 0
+
 function askQuestion (){
     document.getElementById("question").innerHTML = questions[count].question
     document.getElementById("answer-one").innerHTML = questions[count].choices[0]
@@ -27,5 +28,20 @@ function askQuestion (){
 
     // count++
 }
+
+function handleSubmit(event){
+    if($(".selected").length != 0){
+        console.log($(".selected"))
+    }
+    else{
+        console.log("Choose an answer idiot")
+    }
+}
+
+$(".answerChoice").on("click" , function(event){
+    $(".answerChoice").removeClass("selected")
+    $(this).addClass("selected")
+})
+
 
 askQuestion()
